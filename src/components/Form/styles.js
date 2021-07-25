@@ -38,11 +38,10 @@ export default makeStyles((theme) => ({
 			width: "100%"
 		},
 		[theme.breakpoints.up("md")]: {
-			width: "30%",
-			height: "3rem",
-			marginLeft: "auto"
+			width: "30%"
 		},
-
+		marginLeft: "auto",
+		height: "3em",
 		padding: "10px"
 	},
 	errorMessageContainer: {
