@@ -5,7 +5,6 @@ import Card from '@material-ui/core/Card';
 //Components
 import TextInput from "./FormFields/TextInput";
 import FinishButton from "./FormFields/FinishButton";
-import { CardContent } from "@material-ui/core";
 //Styles
 import useStyles from './styles';
 
@@ -16,26 +15,24 @@ const Form = () => {
     return (
         <>
             <Card className={classes.container} variant="outlined">
-				<CardContent>
-					<FormControl>
+					<FormControl className={classes.content}>
 						<Typography className={classes.title} variant="h5" gutterBottom>
 							Sign Up Below!
 						</Typography>
 						<TextInput
-                            className={classes.field}
-							text="Full Name"
+							text="First Name"
 						></TextInput>
 						<TextInput
-                            className={classes.field}
+							text="Last Name"
+						></TextInput>
+						<TextInput
 							text="Email"
 						></TextInput>
 						<TextInput
-                            className={classes.field}
 							text="USU Number"
 						></TextInput>
-						<FinishButton className={classes.button}></FinishButton>
+						<FinishButton></FinishButton>
 					</FormControl>
-				</CardContent>	
 			</Card>
         </>
     );
