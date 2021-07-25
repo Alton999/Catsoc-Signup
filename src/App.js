@@ -39,7 +39,7 @@ const App = () => {
 		}
 	};
 	return (
-		<div>
+		<div style={{backgroundColor: '#e1e0ff'}}>
 			<Form/>
 		</div>
 	);

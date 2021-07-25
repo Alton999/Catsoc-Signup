@@ -1,10 +1,18 @@
 import {makeStyles} from '@material-ui/core/styles';
-import { Translate } from '@material-ui/icons';
 
 export default makeStyles((theme)=>({
+    logo: {
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: '30px',
+        marginTop: '30px',
+        width: '200px',
+    },
+
     container: {
         width: '50%',
-        height: '550px',
+        height: '525px',
         margin: 'auto',
     },
 
@@ -12,7 +20,7 @@ export default makeStyles((theme)=>({
         display: 'flex',
         width: '80%',
         left: '10%',
-        marginTop: '15px',
+        marginTop: '10px',
     },
 
     title: {
