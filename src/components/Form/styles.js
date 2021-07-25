@@ -1,32 +1,44 @@
-import {makeStyles} from '@material-ui/core/styles';
-import { Translate } from '@material-ui/icons';
+import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles((theme)=>({
-    container: {
-        width: '50%',
-        height: '550px',
-        margin: 'auto',
-    },
-
-    content: {
-        display: 'flex',
-        width: '80%',
-        left: '10%',
-        marginTop: '15px',
-    },
-
-    title: {
-        textAlign: 'center',
-        padding: '20px',
-    },
-
-    field: {
-        marginBottom: '28px',
-    },
-
-    button: {
-        width: '100px',
-        marginLeft: 'auto',
-        padding: '10px',
-    }
-}))
+export default makeStyles((theme) => ({
+	container: {
+		width: "50%",
+		height: "550px",
+		margin: "auto"
+	},
+	content: {
+		display: "flex",
+		width: "80%",
+		left: "10%",
+		marginTop: "15px"
+	},
+	title: {
+		textAlign: "center",
+		padding: "20px"
+	},
+	field: {
+		marginBottom: "28px"
+	},
+	button: {
+		width: "20%",
+		marginLeft: "auto",
+		padding: "10px"
+	},
+	errorMessageContainer: {
+		color: "#e11616",
+		display: "inline-flex",
+		marginLeft: "-15px"
+	},
+	errorMessageText: {
+		fontSize: "12px",
+		lineHeight: "18px",
+		marginLeft: "0.5rem",
+		display: "flex",
+		height: "2em",
+		alignItems: "center"
+	},
+	successMessageContainer: {
+		color: "#4BB543",
+		marginTop: "5px"
+	}
+}));
