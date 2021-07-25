@@ -4,7 +4,7 @@ import Form from "./components/Form/Form";
 
 const App = () => {
 	return (
-		<div>
+		<div style={{ backgroundColor: "#e1e0ff" }}>
 			<Form />
 		</div>
 	);
