@@ -10,8 +10,14 @@ export default makeStyles((theme) => ({
 		width: "200px"
 	},
 	container: {
-		width: "50%",
-		height: "550px",
+		[theme.breakpoints.down("sm")]: {
+			width: "90%"
+		},
+		[theme.breakpoints.up("md")]: {
+			width: "40%"
+		},
+		borderRadius: "15px",
+		height: "50vh",
 		margin: "auto"
 	},
 	content: {
