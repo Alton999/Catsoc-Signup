@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+//Components
+import Form from './components/Form/Form';
 
 const App = () => {
 	const [data, setData] = useState({
@@ -36,7 +38,11 @@ const App = () => {
 			console.log(err);
 		}
 	};
-	return <div>This is the home page for the App</div>;
+	return (
+		<div>
+			<Form/>
+		</div>
+	);
 };
 
 export default App;
