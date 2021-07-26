@@ -17,8 +17,8 @@ export default makeStyles((theme) => ({
 			width: "40%"
 		},
 		borderRadius: "15px",
-		height: "50vh",
-		margin: "auto"
+		margin: "auto",
+		height: "525px"
 	},
 	content: {
 		display: "flex",
@@ -34,8 +34,15 @@ export default makeStyles((theme) => ({
 		marginBottom: "28px"
 	},
 	button: {
-		width: "20%",
+		[theme.breakpoints.down("sm")]: {
+			width: "100%"
+		},
+		[theme.breakpoints.up("md")]: {
+			width: "30%",
+			height: "3.2rem"
+		},
 		marginLeft: "auto",
+		height: "3em",
 		padding: "10px"
 	},
 	errorMessageContainer: {
