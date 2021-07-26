@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Typography from "@material-ui/core/Typography";
 import FormControl from "@material-ui/core/FormControl";
 import Card from "@material-ui/core/Card";
+
 //Assets
 import logo from "../../assets/CatsocLogo-02.png";
+
 //Components
 import TextInput from "./FormFields/TextInput";
 import FinishButton from "./FormFields/FinishButton";
@@ -43,15 +45,13 @@ const Form = () => {
 	const emailChecker = (email) => {
 		const emailRe =
 			/^(([^<>()\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		if (initialState.email === false && email === "") {
-			return;
+		if (initialState.email === true && email !== "") {
+			if (emailRe.test(String(email).toLowerCase())) {
+				setEmailValidity(false);
+			} else {
+				setEmailValidity(true);
+			}
 		}
-		if (emailRe.test(String(email).toLowerCase())) {
-			setEmailValidity(false);
-		} else {
-			setEmailValidity(true);
-		}
-		return validEmail;
 	};
 
 	const UsuChecker = (USU) => {
@@ -63,8 +63,8 @@ const Form = () => {
 				setUsuValidity(true);
 			}
 		}
-		return validUsu;
 	};
+
 	useEffect(() => {
 		emailChecker(email);
 		UsuChecker(USU);

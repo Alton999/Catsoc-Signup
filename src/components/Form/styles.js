@@ -38,7 +38,8 @@ export default makeStyles((theme) => ({
 			width: "100%"
 		},
 		[theme.breakpoints.up("md")]: {
-			width: "30%"
+			width: "30%",
+			height: "3.2rem"
 		},
 		marginLeft: "auto",
 		height: "3em",
