@@ -152,8 +152,8 @@ const Form = () => {
 							{isLoading ? <Loader /> : null}
 						</FormControl>
 					)}
-					{currentStage === 2 && <SuccessCard />}
-					{currentStage === 1 && (
+					{currentStage === 1 && <SuccessCard />}
+					{currentStage === 2 && (
 						<ErrorCard handleHomeButton={handleHomeButton} />
 					)}
 				</Card>

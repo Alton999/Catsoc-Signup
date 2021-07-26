@@ -35,7 +35,6 @@ export default makeStyles((theme) => ({
 	},
 	button: {
 		width: "100%",
-		marginLeft: "auto",
 		height: "3em",
 		padding: "10px"
 	},
@@ -57,18 +56,34 @@ export default makeStyles((theme) => ({
 		marginTop: "5px"
 	},
 
-    //Success pg elements
-    successMessage: {
-        textAlign: 'center',
-    },
+	//Success pg elements
+	successMessage: {
+		textAlign: "center"
+	},
 
-    catGif: {
-        display: 'block',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginBottom: '30px',
-        marginTop: '35px',
-        width: '200px',
-        borderRadius: '10px',
-    }
+	catGif: {
+		display: "block",
+		marginLeft: "auto",
+		marginRight: "auto",
+		marginBottom: "30px",
+		marginTop: "35px",
+		width: "200px",
+		borderRadius: "10px"
+	},
+	homeButton: {
+		backgroundColor: theme.palette.others.error,
+		color: "white",
+		marginTop: "15px",
+		width: "100%",
+		height: "3em",
+		padding: "10px",
+		"&:hover": {
+			//you want this to be the same as the backgroundColor above
+			backgroundColor: theme.palette.others.error
+		}
+	},
+	errorMessage: {
+		color: theme.palette.others.error,
+		textAlign: "center"
+	}
 }));
