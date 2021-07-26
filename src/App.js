@@ -1,13 +1,11 @@
 import React from "react";
 //Components
-import Form from './components/Form/Form';
-import Success from './components/Success/Success';
+import Form from "./components/Form/Form";
 
 const App = () => {
 	return (
 		<div>
-			<Form/>
-			<Success/>
+			<Form />
 		</div>
 	);
 };
