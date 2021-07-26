@@ -55,5 +55,20 @@ export default makeStyles((theme) => ({
 	successMessageContainer: {
 		color: theme.palette.others.success,
 		marginTop: "5px"
-	}
+	},
+
+    //Success pg elements
+    successMessage: {
+        textAlign: 'center',
+    },
+
+    catGif: {
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: '30px',
+        marginTop: '35px',
+        width: '200px',
+        borderRadius: '10px',
+    }
 }));

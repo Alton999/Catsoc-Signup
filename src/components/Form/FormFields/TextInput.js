@@ -5,7 +5,7 @@ import {
 	Typography,
 	InputAdornment
 } from "@material-ui/core";
-import useStyles from "../styles";
+import useStyles from "../../styles";
 
 // Icon imports
 import CheckIcon from "@material-ui/icons/Check";

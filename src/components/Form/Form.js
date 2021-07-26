@@ -9,11 +9,12 @@ import logo from "../../assets/CatsocLogo-02.png";
 //Components
 import TextInput from "./FormFields/TextInput";
 import FinishButton from "./FormFields/FinishButton";
-import Success from "./Success";
+import SuccessCard from "../FormPages/SuccessCard";
+import ErrorCard from "../FormPages/ErrorCard";
 import Loader from "../Loader";
 
 //Styles
-import useStyles from "./styles";
+import useStyles from "../styles";
 
 const Form = () => {
 	const classes = useStyles();
@@ -71,6 +72,10 @@ const Form = () => {
 		}
 	};
 
+	const handleHomeButton = () => {
+		setCurrentStage(0);
+	};
+
 	useEffect(() => {
 		emailChecker(email);
 		UsuChecker(USU);
@@ -99,8 +104,10 @@ const Form = () => {
 			setCurrentStage(1);
 		} catch (err) {
 			console.log(err);
+			setCurrentStage(2);
 		}
 	};
+
 	return (
 		<>
 			<img className={classes.logo} src={logo} alt="Catsoc Logo" />
@@ -145,7 +152,10 @@ const Form = () => {
 							{isLoading ? <Loader /> : null}
 						</FormControl>
 					)}
-					{currentStage === 1 && <Success />}
+					{currentStage === 1 && <SuccessCard />}
+					{currentStage === 2 && (
+						<ErrorCard handleHomeButton={handleHomeButton} />
+					)}
 				</Card>
 			</form>
 		</>
