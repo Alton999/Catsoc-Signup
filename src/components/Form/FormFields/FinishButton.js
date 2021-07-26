@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import useStyles from '../styles';
+import useStyles from '../../styles';
 
 const FinishButton = () => {
     const classes = useStyles();

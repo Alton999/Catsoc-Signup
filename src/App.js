@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 //Components
 import Form from './components/Form/Form';
+import Success from './components/Success/Success';
 
 const App = () => {
 	const [data, setData] = useState({
@@ -41,6 +42,7 @@ const App = () => {
 	return (
 		<div style={{backgroundColor: '#e1e0ff'}}>
 			<Form/>
+			<Success/>
 		</div>
 	);
 };

@@ -14,6 +14,10 @@ export default makeStyles((theme)=>({
         width: '50%',
         height: '525px',
         margin: 'auto',
+        borderRadius: '10px',
+        borderStyle: 'solid',
+        borderColor: '#a99dc4',
+        borderWidth: '1px'
     },
 
     content: {
@@ -23,6 +27,7 @@ export default makeStyles((theme)=>({
         marginTop: '10px',
     },
 
+    //Form pg elements
     title: {
         textAlign: 'center',
         padding: '20px',
@@ -36,5 +41,20 @@ export default makeStyles((theme)=>({
         width: '100px',
         marginLeft: 'auto',
         padding: '10px',
+    },
+
+    //Success pg elements
+    successMessage: {
+        textAlign: 'center',
+    },
+
+    catGif: {
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: '30px',
+        marginTop: '35px',
+        width: '200px',
+        borderRadius: '10px',
     }
 }))

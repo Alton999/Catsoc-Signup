@@ -1,6 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import useStyles from '../styles';
+import useStyles from '../../styles';
 
 const TextInput = (props) => {
     const {text} = props
