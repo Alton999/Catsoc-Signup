@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
 import FormControl from "@material-ui/core/FormControl";
 import Card from "@material-ui/core/Card";
@@ -9,6 +9,7 @@ import logo from "../../assets/CatsocLogo-02.png";
 //Components
 import TextInput from "./FormFields/TextInput";
 import FinishButton from "./FormFields/FinishButton";
+import Loader from "../Loader";
 
 //Styles
 import useStyles from "./styles";
@@ -29,6 +30,7 @@ const Form = () => {
 	});
 	const [validEmail, setEmailValidity] = useState(false);
 	const [validUsu, setUsuValidity] = useState(false);
+	const [isLoading, setLoading] = useState(false);
 	const { firstName, lastName, email, USU } = data;
 
 	const handleChange = (e) => {
@@ -72,6 +74,7 @@ const Form = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		setLoading(true);
 		try {
 			const response = await fetch(
 				"https://v1.nocodeapi.com/altonong/google_sheets/jPwQXXkuEKFpjQmz?tabId=Sheet1",
@@ -88,6 +91,7 @@ const Form = () => {
 			await response.json();
 			setData({ ...data, firstName: "", lastName: "", email: "", USU: "" });
 			console.log("Submittted");
+			setLoading(false);
 		} catch (err) {
 			console.log(err);
 		}
@@ -132,6 +136,7 @@ const Form = () => {
 							error={validUsu}
 						/>
 						<FinishButton type="submit">Finish</FinishButton>
+						{isLoading ? <Loader /> : null}
 					</FormControl>
 				</Card>
 			</form>

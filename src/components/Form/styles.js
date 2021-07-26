@@ -34,19 +34,13 @@ export default makeStyles((theme) => ({
 		marginBottom: "28px"
 	},
 	button: {
-		[theme.breakpoints.down("sm")]: {
-			width: "100%"
-		},
-		[theme.breakpoints.up("md")]: {
-			width: "30%",
-			height: "3.2rem"
-		},
+		width: "100%",
 		marginLeft: "auto",
 		height: "3em",
 		padding: "10px"
 	},
 	errorMessageContainer: {
-		color: "#e11616",
+		color: theme.palette.others.error,
 		display: "inline-flex",
 		marginLeft: "-15px"
 	},
@@ -59,7 +53,7 @@ export default makeStyles((theme) => ({
 		alignItems: "center"
 	},
 	successMessageContainer: {
-		color: "#4BB543",
+		color: theme.palette.others.success,
 		marginTop: "5px"
 	}
 }));

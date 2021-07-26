@@ -7,6 +7,16 @@ import { CssBaseline } from "@material-ui/core";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const theme = createTheme({
+	palette: {
+		others: {
+			success: "#2AC769",
+			pending: "#FDBC3F",
+			error: "#FB4E4E"
+		},
+		background: {
+			default: "#e1e0ff"
+		}
+	},
 	overrides: {
 		MuiCssBaseline: {
 			"@global": {
@@ -15,11 +25,6 @@ const theme = createTheme({
 					padding: "0"
 				}
 			}
-		}
-	},
-	palette: {
-		background: {
-			default: "#e1e0ff"
 		}
 	}
 });
