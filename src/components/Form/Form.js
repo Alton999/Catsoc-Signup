@@ -9,6 +9,7 @@ import logo from "../../assets/CatsocLogo-02.png";
 //Components
 import TextInput from "./FormFields/TextInput";
 import FinishButton from "./FormFields/FinishButton";
+import Success from "./Success";
 import Loader from "../Loader";
 
 //Styles
@@ -31,6 +32,9 @@ const Form = () => {
 	const [validEmail, setEmailValidity] = useState(false);
 	const [validUsu, setUsuValidity] = useState(false);
 	const [isLoading, setLoading] = useState(false);
+	const [currentStage, setCurrentStage] = useState(0);
+
+	// Deconstructing
 	const { firstName, lastName, email, USU } = data;
 
 	const handleChange = (e) => {
@@ -92,6 +96,7 @@ const Form = () => {
 			setData({ ...data, firstName: "", lastName: "", email: "", USU: "" });
 			console.log("Submittted");
 			setLoading(false);
+			setCurrentStage(1);
 		} catch (err) {
 			console.log(err);
 		}
@@ -101,43 +106,46 @@ const Form = () => {
 			<img className={classes.logo} src={logo} alt="Catsoc Logo" />
 			<form onSubmit={handleSubmit}>
 				<Card className={classes.container} variant="outlined">
-					<FormControl className={classes.content}>
-						<Typography className={classes.title} variant="h5" gutterBottom>
-							Sign Up Below!
-						</Typography>
-						<TextInput
-							label="First Name"
-							name="firstName"
-							value={firstName}
-							type="text"
-							onChange={handleChange}
-						/>
-						<TextInput
-							label="Last Name"
-							name="lastName"
-							value={lastName}
-							type="text"
-							onChange={handleChange}
-						/>
-						<TextInput
-							label="Email"
-							name="email"
-							value={email}
-							type="email"
-							onChange={handleChange}
-							error={validEmail}
-						/>
-						<TextInput
-							label="USU Number"
-							name="USU"
-							value={USU}
-							type="tel"
-							onChange={handleChange}
-							error={validUsu}
-						/>
-						<FinishButton type="submit">Finish</FinishButton>
-						{isLoading ? <Loader /> : null}
-					</FormControl>
+					{currentStage === 0 && (
+						<FormControl className={classes.content}>
+							<Typography className={classes.title} variant="h5" gutterBottom>
+								Sign Up Below!
+							</Typography>
+							<TextInput
+								label="First Name"
+								name="firstName"
+								value={firstName}
+								type="text"
+								onChange={handleChange}
+							/>
+							<TextInput
+								label="Last Name"
+								name="lastName"
+								value={lastName}
+								type="text"
+								onChange={handleChange}
+							/>
+							<TextInput
+								label="Email"
+								name="email"
+								value={email}
+								type="email"
+								onChange={handleChange}
+								error={validEmail}
+							/>
+							<TextInput
+								label="USU Number"
+								name="USU"
+								value={USU}
+								type="tel"
+								onChange={handleChange}
+								error={validUsu}
+							/>
+							<FinishButton type="submit">Finish</FinishButton>
+							{isLoading ? <Loader /> : null}
+						</FormControl>
+					)}
+					{currentStage === 1 && <Success />}
 				</Card>
 			</form>
 		</>
