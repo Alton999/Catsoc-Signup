@@ -1,16 +1,17 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import useStyles from '../../styles';
+import React from "react";
+import Button from "@material-ui/core/Button";
+import SendIcon from "@material-ui/icons/Send";
+import useStyles from "../../styles";
 
 const FinishButton = ({ children, type }) => {
 	const classes = useStyles();
 	return (
 		<Button
-			className={classes.button}
-			variant="outlined"
+			className={classes.finishButton}
+			variant="contained"
 			size="medium"
-			color="primary"
 			type={type}
+			endIcon={<SendIcon fontSize="inherit" className={classes.endIcon} />}
 		>
 			{children}
 		</Button>

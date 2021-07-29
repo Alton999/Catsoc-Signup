@@ -19,9 +19,10 @@ export default makeStyles((theme) => ({
 		borderRadius: "15px",
 		margin: "auto",
 		height: "525px",
-		border: 'solid',
-		borderWidth: '1.5px',
-		borderColor: '#331832'
+		border: "solid",
+		borderWidth: "1.5px",
+		borderColor: theme.palette.background.default,
+		boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"
 	},
 	content: {
 		display: "flex",
@@ -36,10 +37,16 @@ export default makeStyles((theme) => ({
 	field: {
 		marginBottom: "28px"
 	},
-	button: {
+	finishButton: {
 		width: "100%",
 		height: "3em",
-		padding: "10px"
+		padding: "10px",
+		fontSize: "1rem",
+		backgroundColor: theme.palette.primary.background,
+		color: theme.palette.primary.main
+	},
+	endIcon: {
+		marginLeft: "10px"
 	},
 	errorMessageContainer: {
 		color: theme.palette.others.error,
@@ -63,7 +70,6 @@ export default makeStyles((theme) => ({
 	successMessage: {
 		textAlign: "center"
 	},
-
 	catGif: {
 		display: "block",
 		marginLeft: "auto",

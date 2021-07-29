@@ -8,8 +8,13 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const theme = createTheme({
 	palette: {
-		primary: "#331832",
-		secondary: "#D81e5B",
+		primary: {
+			main: "#331832",
+			background: "#C6D8D3"
+		},
+		secondary: {
+			main: "#D81e5B"
+		},
 		others: {
 			success: "#2AC769",
 			pending: "#FDBC3F",
