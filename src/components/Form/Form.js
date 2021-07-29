@@ -37,7 +37,7 @@ const Form = () => {
 	const [validUsu, setUsuValidity] = useState(false);
 	const [isLoading, setLoading] = useState(false);
 	const [currentStage, setCurrentStage] = useState(0);
-
+	const [disabled, setDisabled] = useState(true);
 	// Deconstructing
 	const { firstName, lastName, email, USU } = data;
 
@@ -82,7 +82,13 @@ const Form = () => {
 			}
 		}
 	};
-
+	const checkAllValid = () => {
+		if (validEmail || validUsu || !firstName || !lastName || !email || !USU) {
+			return true;
+		} else {
+			return false;
+		}
+	};
 	const handleHomeButton = () => {
 		setCurrentStage(0);
 	};
@@ -90,6 +96,7 @@ const Form = () => {
 	useEffect(() => {
 		emailChecker(email);
 		UsuChecker(USU);
+		checkAllValid();
 	});
 
 	const handleSubmit = async (e) => {
@@ -118,7 +125,6 @@ const Form = () => {
 			setCurrentStage(2);
 		}
 	};
-
 	return (
 		<>
 			<img className={classes.logo} src={logo} alt="Catsoc Logo" />
@@ -159,7 +165,9 @@ const Form = () => {
 								onChange={handleChange}
 								error={validUsu}
 							/>
-							<FinishButton type="submit">Finish</FinishButton>
+							<FinishButton type="submit" disabled={checkAllValid()}>
+								Finish
+							</FinishButton>
 							{isLoading ? <Loader /> : null}
 						</FormControl>
 					)}

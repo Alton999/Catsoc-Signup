@@ -13,7 +13,8 @@ const theme = createTheme({
 			background: "#C6D8D3"
 		},
 		secondary: {
-			main: "#D81e5B"
+			main: "#D81e5B",
+			background: "#FDF0D5"
 		},
 		others: {
 			success: "#2AC769",
@@ -21,7 +22,7 @@ const theme = createTheme({
 			error: "#F0544F"
 		},
 		background: {
-			default: "#FDF0D5"
+			default: "#C6D8D3"
 		}
 	},
 	typography: {
