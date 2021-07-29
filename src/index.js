@@ -8,13 +8,15 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const theme = createTheme({
 	palette: {
+		primary: "#331832",
+		secondary: "#D81e5B",
 		others: {
 			success: "#2AC769",
 			pending: "#FDBC3F",
-			error: "#FB4E4E"
+			error: "#F0544F"
 		},
 		background: {
-			default: "#e1e0ff"
+			default: "#FDF0D5"
 		}
 	},
 	typography: {
