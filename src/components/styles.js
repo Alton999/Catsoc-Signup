@@ -42,8 +42,8 @@ export default makeStyles((theme) => ({
 		height: "3em",
 		padding: "10px",
 		fontSize: "1rem",
-		backgroundColor: theme.palette.primary.background,
-		color: theme.palette.primary.main
+		backgroundColor: theme.palette.primary.main,
+		color: "white"
 	},
 	endIcon: {
 		marginLeft: "10px"
