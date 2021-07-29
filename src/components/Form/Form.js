@@ -39,10 +39,18 @@ const Form = () => {
 	const { firstName, lastName, email, USU } = data;
 
 	const handleChange = (e) => {
-		setData({
-			...data,
-			[e.target.name]: e.target.value
-		});
+		if (e.target.name === "firstName" || e.target.name === "lastName") {
+			setData({
+				...data,
+				[e.target.name]:
+					e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1)
+			});
+		} else {
+			setData({
+				...data,
+				[e.target.name]: e.target.value
+			});
+		}
 		setInitialState({
 			...initialState,
 			[e.target.name]: true
