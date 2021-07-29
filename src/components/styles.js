@@ -40,10 +40,7 @@ export default makeStyles((theme) => ({
 	finishButton: {
 		width: "100%",
 		height: "3em",
-		padding: "10px",
-		fontSize: "1rem",
-		backgroundColor: theme.palette.primary.main,
-		color: "white"
+		padding: "10px"
 	},
 	endIcon: {
 		marginLeft: "10px"

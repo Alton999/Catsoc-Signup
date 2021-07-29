@@ -37,7 +37,6 @@ const Form = () => {
 	const [validUsu, setUsuValidity] = useState(false);
 	const [isLoading, setLoading] = useState(false);
 	const [currentStage, setCurrentStage] = useState(0);
-	const [disabled, setDisabled] = useState(true);
 	// Deconstructing
 	const { firstName, lastName, email, USU } = data;
 
