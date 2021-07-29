@@ -1,4 +1,7 @@
+// React imports
 import React, { useState, useEffect } from "react";
+
+// Material UI imports
 import Typography from "@material-ui/core/Typography";
 import FormControl from "@material-ui/core/FormControl";
 import Card from "@material-ui/core/Card";
@@ -6,7 +9,7 @@ import Card from "@material-ui/core/Card";
 //Assets
 import logo from "../../assets/CatsocLogo-02.png";
 
-//Components
+// Custom Components
 import TextInput from "./FormFields/TextInput";
 import FinishButton from "./FormFields/FinishButton";
 import SuccessCard from "../FormPages/SuccessCard";

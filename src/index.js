@@ -17,6 +17,9 @@ const theme = createTheme({
 			default: "#e1e0ff"
 		}
 	},
+	typography: {
+		fontFamily: ["Brandon Grotesque"].join(",")
+	},
 	overrides: {
 		MuiCssBaseline: {
 			"@global": {

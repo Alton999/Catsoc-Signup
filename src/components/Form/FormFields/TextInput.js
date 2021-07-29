@@ -1,15 +1,20 @@
+// React imports
 import React from "react";
+
+// Material UI imports
 import {
 	TextField,
 	FormControl,
 	Typography,
 	InputAdornment
 } from "@material-ui/core";
-import useStyles from "../../styles";
 
 // Icon imports
 import CheckIcon from "@material-ui/icons/Check";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
+
+// Styles
+import useStyles from "../../styles";
 
 const TextInput = (props) => {
 	const { label, name, value, type, onChange, error } = props;
@@ -54,16 +59,7 @@ const TextInput = (props) => {
 			}
 		}
 	};
-	// const settingErrors = () => {
-	// 	if (label === "Email" || label === "USU Number") {
-	// 		if (error) {
-	// 			return true;
-	// 		} else {
-	// 			return false;
-	// 		}
-	// 	}
-	// 	return false;
-	// };
+
 	return (
 		<FormControl>
 			{/* Set all text fields to required */}

@@ -1,9 +1,12 @@
+// React imports
 import React from "react";
 
+// Material UI imports
 import { Typography, Container, Button } from "@material-ui/core";
 
 //Assets
 import picture from "../../assets/background.gif";
+
 //Styles
 import useStyles from "../styles";
 
