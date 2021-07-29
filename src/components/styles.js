@@ -18,7 +18,10 @@ export default makeStyles((theme) => ({
 		},
 		borderRadius: "15px",
 		margin: "auto",
-		height: "525px"
+		height: "525px",
+		border: 'solid',
+		borderWidth: '1.5px',
+		borderColor: '#331832'
 	},
 	content: {
 		display: "flex",
