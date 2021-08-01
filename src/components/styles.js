@@ -18,7 +18,7 @@ export default makeStyles((theme) => ({
 		},
 		borderRadius: "15px",
 		margin: "auto",
-		height: "525px",
+		height: "625px",
 		border: "solid",
 		borderWidth: "1.5px",
 		borderColor: theme.palette.background.default,

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Loader = () => {
 	const classes = useStyles();
-	return <LinearProgress className={classes.root} />;
+	return <LinearProgress className={classes.root} color="secondary" />;
 };
 
 export default Loader;
