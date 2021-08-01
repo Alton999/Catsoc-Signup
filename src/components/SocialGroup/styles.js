@@ -5,6 +5,8 @@ export default makeStyles((theme) => ({
 		textDecoration: "none"
 	},
 	socialsIntro: {
+		textAlign: "center",
+		fontWeight: "700",
 		marginTop: "1.4rem",
 		marginBottom: "0.9rem",
 		fontSize: "1.5rem"

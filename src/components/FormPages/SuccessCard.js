@@ -1,7 +1,12 @@
 import React from "react";
 import { Typography, Container } from "@material-ui/core";
+
 //Assets
 import picture from "../../assets/background.gif";
+
+// Custom components
+import SocialGroup from "../SocialGroup/SocialGroup";
+
 //Styles
 import useStyles from "../styles";
 
@@ -20,8 +25,10 @@ const SuccessCard = () => {
 					more details about payment coming soon!
 				</Typography>
 				<Typography className={classes.title} variant="subtitle1" gutterBottom>
-					Other than that feel free to enjoy our upcoming free events!
+					Other than that feel free to enjoy our upcoming free events! Or join
+					our social medias!
 				</Typography>
+				<SocialGroup />
 			</Container>
 		</>
 	);

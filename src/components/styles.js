@@ -2,9 +2,23 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
 	back: {
+		[theme.breakpoints.down("sm")]: {
+			position: "absolute",
+			top: 5,
+			left: -30,
+			backgroundColor: "none",
+			color: "black"
+		},
+		[theme.breakpoints.up("md")]: {
+			position: "absolute",
+			top: 5,
+			left: -60,
+			backgroundColor: "none",
+			color: "black"
+		},
 		position: "absolute",
-		top: 20,
-		left: 0,
+		top: 5,
+		left: -60,
 		backgroundColor: "none",
 		color: "black"
 	},
@@ -25,14 +39,15 @@ export default makeStyles((theme) => ({
 	},
 	container: {
 		[theme.breakpoints.down("sm")]: {
-			width: "90%"
+			width: "90%",
+			marginBottom: "40px"
 		},
 		[theme.breakpoints.up("md")]: {
 			width: "40%"
 		},
 		borderRadius: "15px",
 		margin: "auto",
-		height: "625px",
+		height: "525px",
 		border: "solid",
 		borderWidth: "1.5px",
 		borderColor: theme.palette.background.default,
@@ -54,9 +69,10 @@ export default makeStyles((theme) => ({
 		marginBottom: "50px"
 	},
 	signupButton: {
-		margin: "auto",
+		marginTop: "20px",
 		height: "48px",
-		width: "60%"
+		width: "100%",
+		marginBottom: "30px"
 	},
 	content: {
 		display: "flex",
@@ -66,7 +82,8 @@ export default makeStyles((theme) => ({
 	},
 	title: {
 		textAlign: "center",
-		padding: "20px"
+		marginBottom: "20px",
+		marginTop: "20px"
 	},
 	field: {
 		marginBottom: "28px"

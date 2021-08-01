@@ -15,7 +15,6 @@ import FinishButton from "./FormFields/FinishButton";
 import SuccessCard from "../FormPages/SuccessCard";
 import ErrorCard from "../FormPages/ErrorCard";
 import Loader from "../Loader";
-import SocialGroup from "./SocialGroup/SocialGroup";
 
 //Styles
 import useStyles from "../styles";
@@ -172,7 +171,6 @@ const Form = () => {
 								Finish
 							</FinishButton>
 							{isLoading ? <Loader /> : null}
-							<SocialGroup />
 						</FormControl>
 					)}
 					{currentStage === 1 && <SuccessCard />}
