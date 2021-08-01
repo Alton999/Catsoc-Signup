@@ -9,6 +9,13 @@ export default makeStyles((theme) => ({
 		marginTop: "30px",
 		width: "200px"
 	},
+	socialIcon: {
+		display: "inline",
+		marginLeft: "auto",
+		marginRight: "auto",
+		padding: "5px",
+		fontSize: 60
+	},
 	container: {
 		[theme.breakpoints.down("sm")]: {
 			width: "90%"
@@ -19,6 +26,21 @@ export default makeStyles((theme) => ({
 		borderRadius: "15px",
 		margin: "auto",
 		height: "525px",
+		border: "solid",
+		borderWidth: "1.5px",
+		borderColor: theme.palette.background.default,
+		boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"
+	},
+	containerHomepage: {
+		[theme.breakpoints.down("sm")]: {
+			width: "90%"
+		},
+		[theme.breakpoints.up("md")]: {
+			width: "40%"
+		},
+		borderRadius: "15px",
+		margin: "auto",
+		height: "700px",
 		border: "solid",
 		borderWidth: "1.5px",
 		borderColor: theme.palette.background.default,
