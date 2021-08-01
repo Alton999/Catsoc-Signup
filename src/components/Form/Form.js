@@ -1,13 +1,13 @@
 // React imports
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Material UI imports
-import Typography from "@material-ui/core/Typography";
-import FormControl from "@material-ui/core/FormControl";
-import Card from "@material-ui/core/Card";
+import { Typography, FormControl, Card, Button } from "@material-ui/core";
 
 //Assets
 import logo from "../../assets/CatsocLogo-02.png";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
 // Custom Components
 import TextInput from "./FormFields/TextInput";
@@ -132,6 +132,9 @@ const Form = () => {
 				<Card className={classes.container} variant="outlined">
 					{currentStage === 0 && (
 						<FormControl className={classes.content}>
+							<Button component={Link} to="/" className={classes.back}>
+								<ArrowBackIosIcon />
+							</Button>
 							<Typography className={classes.title} variant="h5" gutterBottom>
 								Sign Up Below!
 							</Typography>

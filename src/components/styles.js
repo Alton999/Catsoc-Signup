@@ -1,6 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
+	back: {
+		position: "absolute",
+		top: 20,
+		left: 0,
+		backgroundColor: "none",
+		color: "black"
+	},
 	logo: {
 		display: "block",
 		marginLeft: "auto",
@@ -40,11 +47,16 @@ export default makeStyles((theme) => ({
 		},
 		borderRadius: "15px",
 		margin: "auto",
-		height: "700px",
 		border: "solid",
 		borderWidth: "1.5px",
 		borderColor: theme.palette.background.default,
-		boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"
+		boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+		marginBottom: "50px"
+	},
+	signupButton: {
+		margin: "auto",
+		height: "48px",
+		width: "60%"
 	},
 	content: {
 		display: "flex",
