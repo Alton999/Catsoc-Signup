@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Typography, Card, Button, Container } from "@material-ui/core";
+import { Typography, Card, Button, Container, Grid } from "@material-ui/core";
 
 //Assets
 import logo from "../../assets/CatsocLogo-02.png";
 import bongoCat from "../../assets/bongo.gif";
 
-// Custom components
-import SocialGroup from "../SocialGroup/SocialGroup";
+// Icons import
+import FacebookIcon from "../../assets/facebook.svg";
+import InstagramIcon from "../../assets/instagram.svg";
+import DiscordIcon from "../../assets/discord.svg";
 
 //Styles
 import useStyles from "../styles";
@@ -23,6 +25,50 @@ const Homepage = () => {
 						Welcome Fellow Feline Friends to USYD Cat Society!
 					</Typography>
 					<img className={classes.catGif} src={bongoCat} alt="Bongo Cat gif" />
+					<Grid container justifyContent="space-around">
+						<a
+							href="https://www.facebook.com/USYDCatSoc"
+							className={classes.anchor}
+						>
+							<Button>
+								<div>
+									<img
+										src={FacebookIcon}
+										alt="Facebook Hyperlink"
+										className={classes.socialIcon}
+									/>
+									<Typography variant="subtitle2">Facebook</Typography>
+								</div>
+							</Button>
+						</a>
+						<a
+							href="https://www.instagram.com/usydcatsoc/"
+							className={classes.anchor}
+						>
+							<Button>
+								<div>
+									<img
+										src={InstagramIcon}
+										alt="Instagram Hyperlink"
+										className={classes.socialIcon}
+									/>
+									<Typography variant="subtitle2">Instagram</Typography>
+								</div>
+							</Button>
+						</a>
+						<a href="https://discord.gg/H7MEZrJD7f" className={classes.anchor}>
+							<Button>
+								<div>
+									<img
+										src={DiscordIcon}
+										alt="Discord join link"
+										className={classes.socialIcon}
+									/>
+									<Typography variant="subtitle2">Discord</Typography>
+								</div>
+							</Button>
+						</a>
+					</Grid>
 					<Typography
 						className={classes.title}
 						variant="subtitle1"
@@ -36,7 +82,6 @@ const Homepage = () => {
 						tricks, health, and behaviors), volunteering, or possible adoption
 						plans, and many more upcoming activities to come!
 					</Typography>
-					<SocialGroup />
 					<Button
 						component={Link}
 						to="/signup"

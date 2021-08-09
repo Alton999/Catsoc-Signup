@@ -30,13 +30,7 @@ export default makeStyles((theme) => ({
 		marginTop: "30px",
 		width: "200px"
 	},
-	socialIcon: {
-		display: "inline",
-		marginLeft: "auto",
-		marginRight: "auto",
-		padding: "5px",
-		fontSize: 60
-	},
+
 	container: {
 		[theme.breakpoints.down("sm")]: {
 			width: "90%",
@@ -142,5 +136,16 @@ export default makeStyles((theme) => ({
 	errorMessage: {
 		color: theme.palette.others.error,
 		textAlign: "center"
+	},
+	anchor: {
+		textDecoration: "none"
+	},
+	socialIcon: {
+		width: "64px",
+		height: "64px",
+		[theme.breakpoints.down("sm")]: {
+			width: "48px",
+			height: "48px"
+		}
 	}
 }));
