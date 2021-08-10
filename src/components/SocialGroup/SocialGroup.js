@@ -10,9 +10,6 @@ const SocialGroup = () => {
 
 	return (
 		<>
-			<Typography className={classes.socialsIntro} variant="h3" gutterBottom>
-				Join us on social media!
-			</Typography>
 			<Grid container justifyContent="space-between">
 				<a
 					href="https://www.facebook.com/USYDCatSoc"
