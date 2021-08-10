@@ -64,7 +64,7 @@ const Homepage = () => {
 										alt="Discord join link"
 										className={classes.socialIcon}
 									/>
-									<Typography variant="subtitle2">DiscordG</Typography>
+									<Typography variant="subtitle2">Discord</Typography>
 								</div>
 							</Button>
 						</a>
