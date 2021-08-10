@@ -21,13 +21,12 @@ const SuccessCard = () => {
 					Thank you for joining CatSoc!
 				</Typography>
 				<Typography className={classes.title} variant="subtitle1" gutterBottom>
-					Unfortunately our bank account is not currently up and running but
-					more details about payment coming soon!
+					We wish you a very warm welcome to CatSoc! Currently due to the
+					COVID-19 situation we have made all memberships in semester 2 of 2021
+					free! Meaning you'll get all the benefits of a being a full member
+					which expires at the end of this semester!
 				</Typography>
-				<Typography className={classes.title} variant="subtitle1" gutterBottom>
-					Other than that feel free to enjoy our upcoming free events! Or join
-					our social medias!
-				</Typography>
+
 				<SocialGroup />
 			</Container>
 		</>
