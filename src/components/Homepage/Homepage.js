@@ -56,7 +56,7 @@ const Homepage = () => {
 								</div>
 							</Button>
 						</a>
-						<a href="https://discord.gg/H7MEZrJD7f" className={classes.anchor}>
+						<a href="https://discord.gg/4HhkkFPSvD" className={classes.anchor}>
 							<Button>
 								<div>
 									<img

@@ -41,7 +41,6 @@ export default makeStyles((theme) => ({
 		},
 		borderRadius: "15px",
 		margin: "auto",
-		height: "525px",
 		border: "solid",
 		borderWidth: "1.5px",
 		borderColor: theme.palette.background.default,
@@ -72,7 +71,8 @@ export default makeStyles((theme) => ({
 		display: "flex",
 		width: "80%",
 		left: "10%",
-		marginTop: "15px"
+		marginTop: "15px",
+		marginBottom: "20px"
 	},
 	title: {
 		textAlign: "center",
@@ -147,5 +147,9 @@ export default makeStyles((theme) => ({
 			width: "48px",
 			height: "48px"
 		}
+	},
+	banner: {
+		textAlign: "center"
+		// color: theme.palette.others.error
 	}
 }));

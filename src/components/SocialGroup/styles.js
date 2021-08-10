@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
+	marginBottom: {
+		marginBottom: "20px"
+	},
 	socialsIntro: {
 		textAlign: "center",
 		fontWeight: "700",
